@@ -1,0 +1,58 @@
+:root {
+    --neon: #00ff88;
+    --dark: #050505;
+    --card: #111111;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body { background: var(--dark); color: white; overflow-x: hidden; }
+
+/* Animation-ka soo gelitaanka */
+@keyframes nuxNux {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate { animation: nuxNux 0.8s ease-out forwards; }
+
+/* Navbar Casri ah */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 25px 10%; background: rgba(0,0,0,0.9);
+    position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222;
+}
+
+.logo { font-size: 26px; font-weight: 900; color: var(--neon); text-shadow: 0 0 10px var(--neon); }
+
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { color: #fff; text-decoration: none; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover, .active { color: var(--neon); }
+
+/* Hero Section (About) */
+.hero { display: flex; align-items: center; justify-content: space-between; padding: 100px 10%; }
+.hero-text h1 { font-size: 60px; line-height: 1.1; margin-bottom: 20px; }
+.hero-text span { color: var(--neon); }
+
+.hero-img img {
+    width: 320px; height: 320px; border-radius: 50%;
+    border: 5px solid var(--neon); box-shadow: 0 0 30px var(--neon);
+    object-fit: cover;
+}
+
+/* Boxes & Cards */
+.card {
+    background: var(--card); border: 1px solid #222;
+    padding: 30px; border-radius: 20px; margin-bottom: 20px;
+}
+
+.btn-neon {
+    background: var(--neon); color: #000; border: none; padding: 15px 30px;
+    border-radius: 10px; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+.btn-neon:hover { box-shadow: 0 0 20px var(--neon); transform: scale(1.05); }
+
+input, textarea {
+    width: 100%; padding: 15px; background: #000; border: 1px solid #333;
+    color: white; border-radius: 10px; margin-bottom: 15px;
+}
